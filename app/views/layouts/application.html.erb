@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mediahoard</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="navbar-brand" href="#">Media Hoard</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/upload">Add Screencast</a></li>
+              <li><a href="/episodes">Episodes</a></li>
+              <li><a href="/keywords">Keywords</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          &nbsp;
+        </div><!--/span-->
+
+        <div class="span9"> <!-- Main container -->
+         <%= yield %>
+        </div><!--/span for Main container -->
+      </div><!--/row-->
+        <hr>
+
+        <footer>
+          <p>&copy; LG 2012</p>
+        </footer>
+
+      </div><!--/.fluid-container-->
+    </div> <!-- /container -->
+</body>
+</html>
