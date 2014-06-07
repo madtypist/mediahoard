@@ -1,11 +1,13 @@
 <h1>Listing series</h1>
 
+<div align="right"><%= link_to needButtons("glyphicon-plus-sign", "New").html_safe, new_series_path, class: "btn btn-success btn-sm" %></div>
+
 <table class="table table-striped">
   <thead>
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th colspan="2"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -14,8 +16,8 @@
       <tr>
         <td><%= link_to series.title, series %></td>
         <td><%= series.description %></td>
-        <td><%= link_to needButtons("glyphicon-pencil", "Edit").html_safe, edit_series_path(series), class: "btn btn-primary btn-sm" %></td>
-        <td><%= link_to needButtons ("glyphicon-trash","Destroy").html_safe, series, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %></td>
+        <td align="right"><%= link_to needButtons("glyphicon-pencil", "Edit").html_safe, edit_series_path(series), class: "btn btn-primary btn-sm" %>
+        <%= link_to needButtons("glyphicon-trash","Destroy").html_safe, series, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Series', new_series_path %>
+
