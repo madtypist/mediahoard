@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Episode Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contents.each do |content| %>
+    <tr>
+      <td><%= link_to 'Show', series_content_path(@series, content) %></td>
+      <td><%= link_to 'Edit', edit_series_content_path(@series, content) %></td>
+      <td><%= link_to 'Destroy', [@series, content], confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'content/show'
+
+  get 'content/new'
+
+  get 'content/edit'
+
+  get 'content/update'
+
   get 'catalog/index'
 
   resources :series
